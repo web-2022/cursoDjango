@@ -1,0 +1,28 @@
+<!-- Usando plantillas -->
+{% extends "app3/layout.html"%}
+
+<!-- Traendo los blockes que no se repiten y varian segun cada pagina -->
+{% block title%}
+Nuevo departamento
+{% endblock %}
+
+{% block contenido %}
+    <br>
+    <h2>Crear nuevo departamento</h2>
+    <form class="row" method="post" action="{% url 'app3:nuevoDepartamento' %}">
+        {% csrf_token%}
+        <div>
+            <label>Ingresar nombre</label>
+            <input type="text" name="nombreDepartamento">
+        </div>
+       
+        <div>
+            <label>Ingresar descripción</label>
+            <input type="text" name="descripcionDepartamento">
+        </div>
+        <div>
+            
+            <input type="submit" value="Registrar">
+        </div>
+    </form>
+{% endblock %}

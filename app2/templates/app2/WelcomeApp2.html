@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Django</title>
+</head>
+<body>
+    <h1>Ruta: Welcome App2</h1>
+    <ul>
+        <li>Hi</li>
+    </ul>
+
+    <ol>
+        {% for estudiante in estudiantes %}
+            <li>{{ estudiante}}</li>
+        {% endfor%}
+
+        <li>{{estudiante}}</li>
+    </ol>
+
+    <h2>Este es un HTML de la aplicación {{nombreAplicacion}}</h2>
+</body>
+</html>

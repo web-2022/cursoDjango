@@ -1,0 +1,23 @@
+<!-- Usando plantillas -->
+{% extends "app3/layout.html"%}
+
+<!-- Traendo los blockes que no se repiten y varian segun cada pagina -->
+{% block title%}
+    Directorio
+{% endblock %}
+
+{% block contenido %}
+    {% for personaInfo in listaPersonas %}
+    <h6>Personal Registrado</h6>
+    <div>
+            <!-- Dos corchetes es para valores, variables, texto -->
+            <!-- <a class="text-success" href="#">{{ personaInfo.nombre }} {{ personaInfo.apellido }}</a> -->
+            <ol>
+                <li>Nombre: {{personaInfo.nombre}}</li>
+                <li>Apellido: {{personaInfo.apellido}}</li>
+                <li>Telefono: {{personaInfo.numero}}</li>
+            </ol>
+            
+    </div>
+    {% endfor %}
+{% endblock %}
